@@ -1,0 +1,27 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "cppbuild",
+      "label": "cppbuild-main",
+      "command": "g++.exe", // Assumes g++.exe is in your PATH
+      "args": [
+        "-fdiagnostics-color=always",
+        "-g",
+        "${config:buildEntrypoint}",
+        "-o",
+        "${config:buildOutput}"
+      ],
+      "options": {
+        "cwd": "${config:cwd}"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}

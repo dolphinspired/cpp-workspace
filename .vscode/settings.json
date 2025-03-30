@@ -1,0 +1,6 @@
+{
+  "buildDir": "${workspaceFolder}\\build",
+  "buildEntrypoint": "${workspaceFolder}\\main.cpp",
+  "buildOutput": "${workspaceFolder}\\build\\main.exe",
+  "cwd": "${workspaceFolder}",
+}
