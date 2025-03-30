@@ -1,6 +1,7 @@
 # Project-specific files
 
 build
+TutorialConfig.h
 
 # C++-specific files
 # From: https://github.com/github/gitignore/blob/main/C%2B%2B.gitignore

@@ -6,7 +6,8 @@
   "cwd": "${workspaceFolder}",
   // VSCode settings
   "files.associations": {
-    "**\\ucrt64\\include\\c++\\*\\*": "cpp"
+    "**\\ucrt64\\include\\c++\\*\\*": "cpp",
+    "*.h.in": "c", // to avoid autoformat on save
   },
   "terminal.integrated.defaultProfile.windows": "msys2-ucrt64-zsh",
   "terminal.integrated.profiles.windows": {
