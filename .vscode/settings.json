@@ -4,7 +4,6 @@
   "buildEntrypoint": "${workspaceFolder}\\main.cpp",
   "buildOutput": "${workspaceFolder}\\build\\main.exe",
   "cwd": "${workspaceFolder}",
-
   // VSCode settings
   "files.associations": {
     "**\\ucrt64\\include\\c++\\*\\*": "cpp"
@@ -30,5 +29,16 @@
     "editor.formatOnType": true,
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
+    "files.insertFinalNewline": true,
+  },
+  "[jsonc]": {
+    "editor.detectIndentation": false,
+    "editor.formatOnType": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.insertSpaces": true,
+    "editor.indentSize": "tabSize",
+    "editor.tabSize": 2,
+    "files.insertFinalNewline": true,
   },
 }
