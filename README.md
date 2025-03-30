@@ -19,7 +19,6 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 3. Add `C:\msys64\ucrt64\bin` to PATH.
 4. Install VSCode extension: [C/C++ Extension Pack](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools-extension-pack)
-5. Create an empty folder called `build` in the repo's root directory. (todo: automate this)
 
 ## Links
 

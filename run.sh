@@ -5,12 +5,37 @@ set -e
 # Usage: ./run.sh <script_name> [args]
 # Example: ./run.sh setup
 
-SCRIPTS_DIR="${SCRIPTS_DIR:-./scripts}"
-SCRIPTS_INIT="${SCRIPTS_INIT:-__init__.sh}"
-SCRIPTS_INIT_PATH="${SCRIPTS_DIR}/${SCRIPTS_INIT}"
+export SCRIPTS_ENTRY=`realpath "$0"`
+export SCRIPTS_ROOT=`realpath ${SCRIPTS_DIR:-./scripts}`
 
-if [ -f "$SCRIPTS_INIT_PATH" ]; then
-  source "$SCRIPTS_INIT_PATH"
-fi
+init() {
+  module() {
+    local module_dir=`realpath "$1"`
+    local module_init="$module_dir/__init__.sh"
 
+    # Only initialize the directory like a module if __init__.sh exists
+    if [ ! -f "$module_init" ]; then
+      return
+    else
+      source "$module_init"
+    fi
+
+    for entry in "${module_dir}"/*.sh; do
+      if [ -d "$entry" ]; then
+        # Recursively initialize directories as submodules
+        init module "$entry"
+      elif [ -f "$entry" ]; then
+        # Source each script file in the directory
+        source "$entry"
+      fi
+    done
+  }
+
+  $@
+}
+
+# Source all scripts in the scripts directory
+init module "$SCRIPTS_ROOT"
+
+# Run all arguments as a command
 $@
