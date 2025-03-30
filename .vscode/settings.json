@@ -3,4 +3,7 @@
   "buildEntrypoint": "${workspaceFolder}\\main.cpp",
   "buildOutput": "${workspaceFolder}\\build\\main.exe",
   "cwd": "${workspaceFolder}",
+  "files.associations": {
+    "**\\ucrt64\\include\\c++\\*\\*": "cpp"
+  }
 }
