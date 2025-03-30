@@ -1,9 +1,28 @@
 {
+  // Custom settings
   "buildDir": "${workspaceFolder}\\build",
   "buildEntrypoint": "${workspaceFolder}\\main.cpp",
   "buildOutput": "${workspaceFolder}\\build\\main.exe",
   "cwd": "${workspaceFolder}",
+
+  // VSCode settings
   "files.associations": {
     "**\\ucrt64\\include\\c++\\*\\*": "cpp"
-  }
+  },
+  "terminal.integrated.defaultProfile.windows": "bash (MSYS2)",
+  "terminal.integrated.profiles.windows": {
+    // See: https://stackoverflow.com/a/68253833
+    "bash (MSYS2)": {
+      "icon": "terminal-bash",
+      "path": "C:\\msys64\\usr\\bin\\bash.exe",
+      "args": [
+        "--login",
+        "-i",
+      ],
+      "env": {
+        "MSYSTEM": "MINGW64",
+        "CHERE_INVOKING": "1",
+      },
+    },
+  },
 }
