@@ -8,20 +8,19 @@
   "files.associations": {
     "**\\ucrt64\\include\\c++\\*\\*": "cpp"
   },
-  "terminal.integrated.defaultProfile.windows": "bash (MSYS2)",
+  "terminal.integrated.defaultProfile.windows": "msys2-ucrt64-zsh",
   "terminal.integrated.profiles.windows": {
-    // See: https://stackoverflow.com/a/68253833
-    "bash (MSYS2)": {
+    "msys2-ucrt64-zsh": {
       "icon": "terminal-bash",
-      "path": "C:\\msys64\\usr\\bin\\bash.exe",
+      "path": "C:\\msys64\\msys2_shell.cmd",
       "args": [
-        "--login",
-        "-i",
+        "-defterm",
+        "-here",
+        "-no-start",
+        "-ucrt64",
+        "-shell",
+        "zsh",
       ],
-      "env": {
-        "MSYSTEM": "MINGW64",
-        "CHERE_INVOKING": "1",
-      },
     },
   },
   "[cpp]": {

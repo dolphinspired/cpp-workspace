@@ -13,6 +13,8 @@ Just a space where I'm learning C++ in VSCode.
 pacman -S --needed base-devel mingw-w64-ucrt-x86_64-toolchain
 pacman -S cmake
 pacman -S git
+pacman -S zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
 3. Add `C:\msys64\ucrt64\bin` to PATH.
@@ -24,3 +26,5 @@ pacman -S git
 * [C/C++ for Visual Studio Code](https://code.visualstudio.com/docs/languages/cpp)
 * [Debug C++ in Visual Studio Code](https://code.visualstudio.com/docs/cpp/cpp-debug)
 * [MSYS2 - Software Distribution and Building Platform for Windows](https://www.msys2.org/)
+* [Setup Windows Terminal with MSYS2](https://www.msys2.org/docs/terminals/)
+* [Setup Windows Terminal + MSYS2 with zsh + oh-my-zsh](https://gist.github.com/danieleagle/702f43184c4f1e5bf73021106fefc328)
